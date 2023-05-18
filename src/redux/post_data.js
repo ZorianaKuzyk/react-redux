@@ -1,9 +1,10 @@
-import { CHANGE_MESSAGE, CHANGE_RETWEET, CHANGE_LIKE, ADD_POST } from "./types";
-import store from "./store";
+import React from "react";
+import store from "../../redux/store";
+import Post from "./post";
 
-const initialStore = [
+const pData = [
   {
-    id: 3,
+    id: 1,
     name: "Anakin Skywalker",
     avatar:
       "https://github.com/ZorianaKuzyk/react-redux/raw/master/public/img/skywalker-ava.jpg",
@@ -37,7 +38,7 @@ const initialStore = [
     likeIsPressed: false,
   },
   {
-    id: 1,
+    id: 3,
     name: "Princess/General Leia Organa",
     avatar:
       "https://github.com/ZorianaKuzyk/react-redux/raw/master/public/img/leiaOrgana-ava.jpg",
@@ -55,13 +56,5 @@ const initialStore = [
   },
 ];
 
-function reducer(store = initialStore, action) {
-  switch (action.type) {
-    case ADD_POST: {
-      return [{ ...action.payload }, ...store];
-    }
-  }
-  return store;
-}
-
-export default reducer;
+let copyStore = store.getState();
+pData.map((p) => copyStore.push(p));
