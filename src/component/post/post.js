@@ -22,11 +22,7 @@ const Post = (props) => {
           <span className="card__header__textBox">
             <div className="card__header__textBox_name">
               <span className="bold">{props.name}</span>
-              <img
-                src={`${path}` + "star-active.png"}
-                className="star-active"
-                alt="Active Button"
-              />
+
               <span className="gray">
                 <a>{props.nickname}</a> &bull; {props.date}
               </span>
@@ -35,13 +31,7 @@ const Post = (props) => {
               <span>{props.content}</span>
             </div>
           </span>
-          <span className="card__header__textBox_dw_Arrow">
-            <img
-              src={`${path}` + "down-arrow.png"}
-              width="14px"
-              alt="Down Arrow"
-            />
-          </span>
+          <span className="card__header__textBox_dw_Arrow"></span>
         </div>
 
         <div className="card__center">
