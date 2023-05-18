@@ -11,7 +11,7 @@ import {
 
 const Post = (props) => {
   const path =
-    "https://github.com/ZorianaKuzyk/react-redux/tree/master/src/component/img";
+    "https://github.com/ZorianaKuzyk/react-redux/raw/master/public/img/";
   return (
     <div className={"background"}>
       <div className="card">
